@@ -1,3 +1,4 @@
+'use strict';
 let arrayOfAnimals = [];
 console.log('The variable arrayOfAnimals is going to print an empty object!');
 console.log(arrayOfAnimals);

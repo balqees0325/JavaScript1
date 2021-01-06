@@ -1,3 +1,4 @@
+'use strict';
 let numberX;
 console.log('x is undefined!');
 console.log(numberX);
