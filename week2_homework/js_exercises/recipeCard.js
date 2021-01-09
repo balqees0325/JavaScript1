@@ -1,12 +1,12 @@
 'use strict';
 const recipeCard = {
-  title: 'pizza',
+  Meal_name: 'pizza',
   serving: 3,
   ingredients: ['flour 200g', 'yeast 10g',
   'milk 80g', 
-  'cheese 150kg','olive 50g', 'meat', 'tomato 100g']
+  'cheese 150kg','olive 20g', 'meat', 'tomato 50g']
 }
-for (let key in recipeCard ) {
-  console.log(recipeCard[key]);
+for (let [key, value] of Object.entries(recipeCard)) {
+  console.log(`${key}: ${value}`);
 }
 
