@@ -20,8 +20,8 @@ books.forEach(book =>{
 console.log(`${book.title} by ${book.author}`);
 
 if(book.alreadyRead === true) {
-  console.log(`You already read ${book.title}`);
+  console.log(`You already read ${book.title} by ${book.author}`);
 } else {
-  console.log(`You still need to read ${book.title}`)
+  console.log(`You still need to read ${book.title} by ${book.author}`);
 }
 })

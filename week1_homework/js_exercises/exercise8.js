@@ -9,7 +9,7 @@ let secondArr = ['chocolate', 'cheese', 13, 'nuts'];
 if((typeof firstVar === typeof secondVar) || (typeof firstArr === typeof secondArr)) {
   console.log('same data type!')
 } 
-if(typeof secondVal !== typeof secondArr) {
+else if((typeof firstVar !== typeof firstArr) || (typeof secondVal !== typeof secondArr))  {
   console.log('They two data types are not same!')
 }
 else {

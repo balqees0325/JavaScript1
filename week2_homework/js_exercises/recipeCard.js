@@ -6,7 +6,7 @@ const recipeCard = {
   'milk 80g', 
   'cheese 150kg','olive 20g', 'meat', 'tomato 50g']
 }
+ 
 for (let [key, value] of Object.entries(recipeCard)) {
-  console.log(`${key}: ${value}`);
+  console.log(`${key}:${value}`);
 }
-
