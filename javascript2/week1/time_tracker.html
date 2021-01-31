@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,21 +10,27 @@
 
   </div>
   <script>
+    const showTime = () => {
+     document.body.textContent = '';
     const day = new Date();
     const hour = day.getHours();
     const minute = day.getMinutes();
     const second = day.getSeconds();
     const time = `${hour}: ${minute}: ${second}`;
-
     const newDiv = document.createElement('div');
-
     const newParagraph = document.createElement('p');
     newParagraph.textContent = time;
     newDiv.appendChild(newParagraph);
     document.body.appendChild(newDiv);
 
-    // setinterval
-    const currentTime = setInterval(() => getCurrentTime(), 1000)
+    newParagraph.style.fontSize = '150px';
+    newParagraph.style.color = 'blue';
+    newDiv.style.textAlign = 'center';
+      
+       // setinterval
+    }
+    currentTime = setInterval( showTime, 1000)
+   
       
   </script>
 </body>
