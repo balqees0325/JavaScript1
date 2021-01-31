@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about me</title>
+
+    <style>
+      h1 {
+        color: rgb(99, 5, 5);
+        font-size: 3.5rem;
+      }
+      li {
+        list-style-type: none;
+      }
+      .list-item {
+        color: red;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <h1>About Me</h1>
+
+    <ul>
+      <li>Nickname: <span id="nickname"></span></li>
+      <li>Favorite food: <span id="fav-food"></span></li>
+      <li>Hometown: <span id="hometown"></span></li>
+    </ul>
+    <!-- adding script tag -->
+    <script>
+      const body = document.querySelector("body");
+      const listItem = document.querySelectorAll("li");
+      const nickName = document.getElementById("nickname");
+      const favoriteFood = document.getElementById("fav-food");
+      const homeTown = document.getElementById("hometown");
+
+      //changing font family.
+      body.style.fontFamily = "Arial, sans-serif";
+      body.style.backgroundColor = "";
+      body.style.textAlign = 'center';
+      // replacing span with text.
+      nickName.innerText = "qees4techiegal";
+      favoriteFood.innerText = "Pizza";
+      homeTown.innerText = "Inisha";
+
+      // loop through the li.
+      listItem.forEach((item) => {
+        item.className = "list-item";
+      });
+      //create an image tag;
+      const image = document.createElement("img");
+      image.src = '/powerpuff.PNG';
+      
+      body.appendChild(image);
+      
+    </script>
+  </body>
+</html>

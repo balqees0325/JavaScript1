@@ -1,0 +1,60 @@
+body {
+  background-image: linear-gradient(to right, rgb(1, 6, 24), rgb(3, 46, 165), rgb(1, 7, 1));
+  color:#fff;
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
+}
+.container {
+  width: 500px;
+  height: 250px;
+  background-color: rgba(5, 236, 159, 0.363);
+  margin: 100px auto;
+  text-align: center;
+  border: 5px solid rgba(7, 245, 7, 0.082);
+  border-radius: 10px;
+  position: relative;
+}
+#quote-output {
+  margin: 50px auto 0 auto;
+  width: 350px;
+  animation: bounceIn 10s ease 10s infinite forwards;
+}
+@keyframes bounceIn {
+   0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#btn {
+  padding: 8px 12px;
+  margin-top:20px;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+  outline: none;
+}
+#btn:hover {
+  background-color: turquoise;
+  color:rgba(4, 0, 15, 0.986);
+  border: none;
+}
+#social {
+  position: absolute;
+  bottom: 0px;
+  padding: 10px;
+}
+#social i {
+  padding: 0 0 0 5px;
+  color: dodgerblue
+}

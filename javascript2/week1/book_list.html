@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>book-list</title>
+  <style>
+    h1 {
+      font-size: 5rem;
+      color: rgba(3, 17, 3, 0.932);
+      text-shadow: 1px 2px 0 green;
+    }
+    li {
+      list-style-type: none;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="body">
+    <h1>Book Lists</h1>
+  </div>
+  <script>
+    const books = [
+  {
+    title: 'The Design of Everyday Things',
+    author: 'Don Norman',
+    url:  'https://miro.medium.com/max/1200/1*Qo27inBKBKY4Q4Pgk5KkbQ.png',
+    
+    alreadyRead: false
+  },
+  {
+    title: 'The Most Human Human',
+    author: 'Brian Christian',
+    url: 'https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg',
+    
+    alreadyRead: true
+  },
+  {
+    title: 'The Pragmatic Programmer',
+    author: 'Andrew Hunt',
+    url: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/The_pragmatic_programmer.jpg/220px-The_pragmatic_programmer.jpg',
+    alreadyRead: true
+  }
+];
+
+   const newDiv = document.querySelector('#body')
+
+  //looping through the book array.
+  const newUl = document.createElement('ul');
+  books.forEach(book => {
+  let listItem = document.createElement('li');
+  listItem.style.display = 'inline-block';
+  listItem.style.width = '200px';
+  listItem.style.margin = '10px'
+  listItem.style.textAlign = 'center';
+  let image = document.createElement('img');
+  image.src = book.url;
+  image.style.width = '100px';
+  image.style.height = '150px';
+  let newParagraph = document.createElement('p');
+  newParagraph.innerText = `${book.title}: ${book.author}`;
+  newParagraph.style.color = '#dfd444';
+  newParagraph.style.fontSize = '16px';
+  listItem.appendChild(newParagraph);
+  listItem.appendChild(image);
+  newUl.appendChild(listItem);
+  
+  if(book.alreadyRead === true) {
+    listItem.style.backgroundColor = 'green';
+  } else {
+    listItem.style.backgroundColor = 'red';
+  }
+  
+   newDiv.appendChild(newUl);
+   newDiv.style.textAlign = 'center';
+ });
+
+  </script>
+</body>
+</html>
