@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>collective age</title>
+</head>
+<body>
+  <script>
+    const hackYourFutureMembers = [
+  { name: 'Wouter', age: 33 },
+  { name: 'Federico', age: 32 },
+  { name: 'Noer', age: 27 },
+  { name: 'Tjebbe', age: 22 },
+];
+const combinedAge = (ages) =>{
+  const calcAge = ages.map(member => member.age);
+  const sumAge = calcAge.reduce((a,b) => a + b);
+  console.log(`The collective age of the HYF team is: ${sumAge}`)
+  return sumAge;
+}
+
+console.log(combinedAge(hackYourFutureMembers));
+  </script>
+</body>
+</html>

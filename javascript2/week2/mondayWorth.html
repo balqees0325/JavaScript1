@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mondayTasks</title>
+</head>
+<body>
+  <script>
+      const mondayTasks = [
+  {
+    name: 'Daily standup',
+    duration: 30, // specified in minutes
+  },
+  {
+    name: 'Feature discussion',
+    duration: 120,
+  },
+  {
+    name: 'Development time',
+    duration: 240,
+  },
+  {
+    name: 'Talk to different members from the product team',
+    duration: 60,
+  },
+];
+  const getHourlyRate = (tasks) =>{
+
+    // iterate through the array to return a new array.
+    const durations = tasks.map((duration) => (duration.duration/60) * 25)
+    const sum = durations.reduce((a,b) => a + b);
+    // getting the ascii code for euro;
+    return String.fromCharCode(8364) + sum;
+  }
+  console.log(getHourlyRate(mondayTasks));
+  </script>
+</body>
+</html>

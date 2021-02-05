@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lemon allergy</title>
+</head>
+<body>
+  <script>
+    const fruitBasket = ['Apple', 'Lemon', 'Grapefruit', 'Lemon', 'Banana', 'Watermelon', 'Lemon'];
+    const fruitsArray = (fruits) =>
+    {
+    const filteredFruit = fruits.filter(fruit =>{
+      if(fruit === 'Lemon') {
+        return fruit;
+      }
+    });
+    console.log(filteredFruit);
+    console.log(`My mom bought me a fruit basket, containing: ${fruitBasket}`)
+  }
+  fruitsArray(fruitBasket);
+  </script> 
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my favoritehobbies</title>
+</head>
+<body>
+  <div class="container">
+    <div id="hobbies">
+      <h3>Click the button to find out my hobbies</h3> 
+    </div>
+    <button id="btn">Click me</button>
+  </div>
+  <script>
+    const myHobbies = [
+  'Meditation',
+  'Reading',
+  'Programming',
+  'Hanging out with friends',
+  'Going to the gym',
+];
+const div = document.getElementById('hobbies');
+const button = document.getElementById('btn');
+const body = document.querySelector('body');
+
+const displayHobbies = () =>{
+
+  myHobbies.forEach(hobby => {
+  const ul = document.createElement('ul');
+  const listItems = document.createElement('li');
+  listItems.innerText = hobby;
+  ul.appendChild(listItems);
+  div.appendChild(ul);
+   
+  })
+  button.style.display = 'none';
+}
+// 
+ button.addEventListener('click', displayHobbies);
+ 
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>even numbers</title>
+</head>
+<body>
+  <script>
+  const doubleNumbers = num =>{
+  
+  const filteredNumber = num.filter(number => {
+    if(number % 2 === 0) {
+      return number;
+    }
+  }).map(number => number * 2);
+  return filteredNumber;
+}
+const numberArray = [1, 2, 3, 4];
+console.log(doubleNumbers(numberArray));
+  </script>
+</body>
+</html>
+
